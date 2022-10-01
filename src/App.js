@@ -1,7 +1,6 @@
 import Sdata from './data';
 import Card from './card';
 import React, {useState} from 'react';
-Hello
 
 const App=()=>{
 
