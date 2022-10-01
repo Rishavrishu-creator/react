@@ -1,26 +1,25 @@
-import Sdata from './data';
-import Card from './card';
-import React, {useState} from 'react';
+import Card from './comp1';
+import React, {createContext, useState} from 'react';
+
 
 const App=()=>{
 
-  const [name,setName]=useState("a");
+  const [num,setNum]=useState(0);
 
-const inputEvent=(event)=>{
-  console.log(event.target.value)
-  setName(event.target.value);
-}
+  const inputEvent=()=>{
+    setNum(num+1);
+    alert("This button is clicked")
+  }
+
+
   return (
-    <div>
-      <h1>Hello {name}</h1>
-      <input type="text" placeholder="Enter your name" onChange={inputEvent} value={name}/>
-      <button>Click Me</button>
+    <button type='submit' onClick={inputEvent} style={{width:50,height:100}}>{num}</button>
+  )
 
-
-    </div>
-  );
-  
 
 }
+
+
+
 
 export default App;
